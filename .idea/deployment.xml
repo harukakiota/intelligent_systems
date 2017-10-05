@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="https://github.com/harukakiota/intelligent_systems.git" uploadOnCheckin="634eeceb-5ca0-40de-bb04-6b087ab6fe76">
+    <serverData>
+      <paths name="https://github.com/harukakiota/intelligent_systems.git">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="https://github.com/harukakiota/intelligent_systems.git" />
+  </component>
+</project>
