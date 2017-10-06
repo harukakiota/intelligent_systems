@@ -11,7 +11,7 @@ public class Main {
         int task;
         do {
             System.out.println("Введите номер задания, 0 для выхода"); // выбираем задание
-            task = in.nextInt();
+            task = Integer.valueOf(in.nextLine());
             switch (task) {
                 case 1:
                     new Task1();
@@ -21,6 +21,9 @@ public class Main {
                     break;
                 case 3:
                     new Task3();
+                    break;
+                case 4:
+                    new Task4();
                     break;
                 case 0:
                     System.out.println("Have a nice day!");

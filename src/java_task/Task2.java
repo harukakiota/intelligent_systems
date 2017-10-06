@@ -11,7 +11,7 @@ class Task2 { // имплементируем Rot13
 
         String income, outcome;
         System.out.println("Введите строку для кодирования:");
-        income = in.next();
+        income = in.nextLine();
         outcome = encode_decode(income); // кодируем
         System.out.println("Закодированная строка: " + outcome);
         System.out.println("Раскодированная строка: " + encode_decode(outcome)); // декодируем

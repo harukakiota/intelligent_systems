@@ -7,21 +7,22 @@ import static java_task.Main.in;
 class Task1 { // имплементируем алгоритм Евклида с помощью веселых функций взятия остатка в Java.
 
     Task1() {
+
         int a, b;
 
         System.out.println("Введите первое число:"); // получаем значения для вычисления НОД
-        a = in.nextInt();
+        a = Integer.valueOf(in.nextLine());
         System.out.println("Введите второе число:");
-        b = in.nextInt();
+        b = Integer.valueOf(in.nextLine());
 
         int gcd1 = gcd1(a, b);
-        System.out.println(gcd1); // будет давать отрицательные значения из-за реализации % (исправляется взятием модуля)
+        System.out.println(gcd1 + " - используя %"); // будет давать отрицательные значения из-за реализации % (исправляется взятием модуля)
 
         int gcd2 = gcd2(a, b); // будет давать отрицательные значения из-за реализации floorMod (исправляется взятием модуля)
-        System.out.println(gcd2);
+        System.out.println(gcd2 + " - используя floorMod");
 
         int gcd3 = gcd3(a, abs(b)); // не будет давать отрицательные значения.
-        System.out.println(gcd3);
+        System.out.println(gcd3 + " - используя математический остаток");
 
     }
 
