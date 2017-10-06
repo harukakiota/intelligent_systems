@@ -3,10 +3,9 @@ package java_task;
 import java.util.Scanner;
 import static java.lang.Math.*;
 
-public class Task1 {
+class Task1 { // имплементируем алгоритм Евклида с помощью веселых функций взятия остатка в Java.
 
-    public static void main (String args []) {
-
+    Task1() {
         int a, b;
         Scanner in = new Scanner(System.in);
 
@@ -26,7 +25,7 @@ public class Task1 {
     }
 
     // используя %, который возвращает значение, ближайшее к нулю
-    private static int gcd1(int a, int b) {
+    private int gcd1(int a, int b) {
         if (b == 0) {
             return a;
         } else {
@@ -35,7 +34,7 @@ public class Task1 {
     }
 
     // используя floorMod, который возвращает значение, меньшее или равное частному
-    private static int gcd2(int a, int b) {
+    private int gcd2(int a, int b) {
         if (b == 0) {
             return a;
         } else {
@@ -44,7 +43,7 @@ public class Task1 {
     }
 
     // используя rem
-    private static int gcd3(int a, int b) {
+    private int gcd3(int a, int b) {
         if (b == 0) {
             return a;
         } else {
