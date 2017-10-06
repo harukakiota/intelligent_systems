@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 import static java_task.Main.in;
 
-public class Task4 { // потоковая обертка над Scanner для конкретных типов
+class Task4 { // потоковая обертка над Scanner для конкретных типов
 
     Task4() {
 
