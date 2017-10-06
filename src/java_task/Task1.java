@@ -1,13 +1,13 @@
 package java_task;
 
-import java.util.Scanner;
-import static java.lang.Math.*;
+import static java.lang.Math.abs;
+import static java.lang.Math.floorMod;
+import static java_task.Main.in;
 
 class Task1 { // имплементируем алгоритм Евклида с помощью веселых функций взятия остатка в Java.
 
     Task1() {
         int a, b;
-        Scanner in = new Scanner(System.in);
 
         System.out.println("Введите первое число:"); // получаем значения для вычисления НОД
         a = in.nextInt();
@@ -22,6 +22,7 @@ class Task1 { // имплементируем алгоритм Евклида с
 
         int gcd3 = gcd3(a, abs(b)); // не будет давать отрицательные значения.
         System.out.println(gcd3);
+
     }
 
     // используя %, который возвращает значение, ближайшее к нулю

@@ -1,6 +1,6 @@
 package java_task;
 
-import java.util.Scanner;
+import static java_task.Main.in;
 
 class Task2 { // имплементируем Rot13
 
@@ -10,25 +10,24 @@ class Task2 { // имплементируем Rot13
     Task2() {
 
         String income, outcome;
-        Scanner in = new Scanner(System.in);
         System.out.println("Введите строку для кодирования:");
-        income = in.nextLine();
-        outcome = encode_decode(income);
-        System.out.println("Закодированная строка:" + outcome);
-        System.out.println("Раскодированная строка:" + encode_decode(outcome));
+        income = in.next();
+        outcome = encode_decode(income); // кодируем
+        System.out.println("Закодированная строка: " + outcome);
+        System.out.println("Раскодированная строка: " + encode_decode(outcome)); // декодируем
 
     }
 
-    private String encode_decode(String income) {
+    private String encode_decode(String income) { // функция кодирования/декодирования
 
         String outcome = "";
         char currentLetter;
         for(int i = 0; i < income.length(); i++) {
             currentLetter = income.charAt(i);
-            if (letters.contains(String.valueOf(currentLetter))) {
+            if (letters.contains(String.valueOf(currentLetter))) { // проверяем, из алфавита символ или нет
                 outcome = outcome + letters.charAt((letters.indexOf(currentLetter) + 26) % 52); // ищет нужный элемент для де/кодирования
             } else {
-                outcome = outcome + currentLetter;
+                outcome = outcome + currentLetter; // иначе оставляет символ тем же
             }
         }
         return outcome;
