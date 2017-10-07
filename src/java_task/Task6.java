@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static java_task.Main.in;
 
-public class Task6 {
+public class Task6 { // нахождение количества инстансов указанного символа в файле
 
     Task6() {
 
@@ -18,7 +18,7 @@ public class Task6 {
         char symbol = in.nextLine().charAt(0); // считываем символ и переводим в char
         int count = 0;
 
-        try (Stream<String> stream = Files.lines(Paths.get("data_for_task_6/123.txt"))) { // берем файл и считываем все строки
+        try (Stream<String> stream = Files.lines(Paths.get("data_for_task_6/test.txt"))) { // берем файл и считываем все строки
             List<String> lines = stream
                     .filter(line -> line.contains(String.valueOf(symbol))) // фильтруем те, в которых точно есть этот символ
                     .map(String::trim)
@@ -29,8 +29,8 @@ public class Task6 {
                 lineInChar = x.chars().mapToObj(e->(char)e).collect(Collectors.toList());
                 count+= Collections.frequency(lineInChar,symbol); // считаем количество этого символа в данной строке
             }
+            System.out.println(count); // выводим подсчитанное число
 
-            System.out.println(count);
         } catch (IOException e) { // обрабатываем исключение
             System.out.println("Ошибка ввода-вывода.");
             e.printStackTrace();
