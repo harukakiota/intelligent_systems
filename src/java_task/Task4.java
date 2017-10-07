@@ -1,9 +1,6 @@
 package java_task;
 
-import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
+import java.util.stream.*;
 import static java_task.Main.in;
 
 class Task4 { // потоковая обертка над Scanner для конкретных типов
