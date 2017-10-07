@@ -10,7 +10,7 @@ public class Main {
 
         int task;
         do {
-            System.out.println("Введите номер задания или 0, чтобы выйти"); // выбираем задание
+            System.out.println("Введите номер задания (от 1 до 10) или 0, чтобы выйти"); // выбираем задание
             task = Integer.valueOf(in.nextLine());
             switch (task) {
                 case 1:
@@ -39,6 +39,9 @@ public class Main {
                     break;
                 case 9:
                     new Task9();
+                    break;
+                case 10:
+                    new Task10();
                     break;
                 case 0:
                     System.out.println("Have a nice day!");
