@@ -34,6 +34,9 @@ public class Main {
                 case 7:
                     new Task7();
                     break;
+                case 8:
+                    new Task8();
+                    break;
                 case 0:
                     System.out.println("Have a nice day!");
                     break;
