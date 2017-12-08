@@ -10,7 +10,7 @@ import static java.lang.Math.toIntExact;
 
 class Task9 {
 
-    Task9() { // ссставляем стрим из чередующихся элементов двух других стримов
+    Task9() { // составляем стрим из чередующихся элементов двух других стримов
 
         Stream first = Stream.iterate(1, n -> n + 2).limit(50); // 2 стрима, для наглядности первый состоит из нечетных чисел до 100
         Stream second = Stream.iterate(2, n -> n + 2).limit(100); // а второй из четных чисел до 200
