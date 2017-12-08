@@ -22,7 +22,8 @@ class Task9 {
         System.out.println();
     }
 
-    public static Stream zip(Stream first, Stream second) { // правильная функция без List<>
+    // правильная функция без List<>
+    public static Stream zip(Stream first, Stream second) {
 
         Stream.Builder builder = Stream.builder(); // результирующий стрим будем строить билдером
 
@@ -32,13 +33,16 @@ class Task9 {
         while (it_first.hasNext() && it_second.hasNext()) // пока в обоих одновременно есть хотя бы по 1 элементу
         {
             builder.accept(it_first.next()); // добавляем по одному элементу в билдер
-            builder.accept(it_second.next()); // так как добавляемые элементы нигде больше не используются, я выбрала метод .accept вместо .add
+            builder.accept(it_second.next());
+            /* так как добавляемые элементы нигде больше не используются,
+            я выбрала метод .accept вместо .add */
         }
 
         return builder.build(); // строим стрим из подготовленного билдера и возвращаем этот стрим как результирующий
     }
 
-    public static Stream zip_incorrect(Stream first, Stream second) { // неправильная функция с использованием List<>, оставила на всякий случай
+    // неправильная функция с использованием List<>, оставила на всякий случай
+    public static Stream zip_incorrect(Stream first, Stream second) {
 
         List f = (List) first.collect(Collectors.toList()); // передаем стримы в List, чтобы не потерять данные
         List s = (List) second.collect(Collectors.toList()); // и не словить исключение, что стрим закрыт
